@@ -16,30 +16,29 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Controller {
+public class JobExperienceController {
     
     @Autowired
-    private IPersonaService persService;
+    private IJobExperienceService jobExperienceService;
     
-    @GetMapping("/persona/{id}")
-    public Persona GetPortfolio(@PathVariable long id){
-        return persService.GetPersonaById(id);
+    @GetMapping("/job/{id}")
+    public JobExperience GetJobExperience(@PathVariable long id){
+        return jobExperienceService.GetJobExperienceByID(id);
     }
     
-    @PostMapping("/persona/new")
-    public void CreatePersona(@RequestBody Persona pers){
-        persService.CreatePersona(pers);
+    @PostMapping("/job/new")
+    public void CreateJobExperience(@RequestBody JobExperience job){
+        jobExperienceService.CreateJobExperience(job);
     }
     
-    @DeleteMapping("/personsa/delete/{id}")
-    public void DeletePersona(@PathVariable Long id){
-        persService.DeletePersona(id);
+    @DeleteMapping("/job/delete/{id}")
+    public void DeleteJobExperience(@PathVariable Long id){
+        jobExperienceService.DeleteJobExperience(id);
     }
     
-    @PutMapping("/persona/update/{id}")
-    public void UpdatePersona(@PathVariable long id,
-                              @RequestParam("name") String newName){
-        Persona pers = persService.GetPersonaById(id);
-        persService.UpdatePersona(pers, id);
+    
+    @GetMapping("/jobs/{id}")
+    public List<JobExperience> GetJobExperiencesByPersonaId(@PathVariable long id){
+        return jobExperienceService.GetJobExperiencesByPersonaId(id);
     }
 }
