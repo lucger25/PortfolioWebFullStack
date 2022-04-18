@@ -6,15 +6,14 @@ import java.util.List;
 
 public interface IProyectService {
     
-    public List<Proyect> GetJobExperiences();
+    public List<Proyect> GetProyect();
 
-    public Proyect GetJobExperienceByID(long id);
+    public Proyect GetProyectByID(long id);
 
-    public void CreateJobExperience(Proyect proyect);
-
+    public void CreateProyect(Proyect proyect);
    
-    public void DeleteJobExperience(Long id);
+    public void DeleteProyect(Long id);
 
-    public List<Proyect> GetJobExperiencesByPersonaId(Long personaId);
+    public List<Proyect> GetProyectByPersonaId(Long personaId);
 
 }

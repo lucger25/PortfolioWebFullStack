@@ -29,7 +29,7 @@ public class SkillService implements ISkillService{
     }
    
     @Override
-    public void Deleteskill(Long id) {
+    public void DeleteSkill(Long id) {
         skillRepo.deleteById(id);
     }
     

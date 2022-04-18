@@ -13,28 +13,28 @@ public class ProyectService implements IProyectService{
     public ProyectRepository proyectRepo;
 
     @Override
-    public List<Proyect> GetJobExperiences() {
+    public List<Proyect> GetProyect() {
         return proyectRepo.findAll();
     }
     
     @Override
-    public Proyect GetJobExperienceByID(long id) {
+    public Proyect GetProyectByID(long id) {
         return proyectRepo.findById(id).orElse(null);
     }
 
     @Override
-    public void CreateJobExperience(Proyect proyect) {
+    public void CreateProyect(Proyect proyect) {
         
         proyectRepo.save(proyect);
     }
    
     @Override
-    public void DeleteJobExperience(Long id) {
+    public void DeleteProyect(Long id) {
         proyectRepo.deleteById(id);
     }
     
     @Override
-    public List<Proyect> GetJobExperiencesByPersonaId(Long personaId) {
+    public List<Proyect> GetProyectByPersonaId(Long personaId) {
         return proyectRepo.findAllByPersonaId(personaId);
     }
 }

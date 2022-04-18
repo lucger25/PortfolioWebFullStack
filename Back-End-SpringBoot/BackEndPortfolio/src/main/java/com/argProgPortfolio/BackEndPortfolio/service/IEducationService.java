@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface IEducationService {
     
-    public List<Education> GetJobExperiences();
+    public List<Education> GetEducation();
     
-    public Education GetJobExperienceByID(long id);
+    public Education GetEducationByID(long id);
     
-    public void CreateJobExperience(Education education);
+    public void CreateEducation(Education education);
     
-    public void DeleteJobExperience(Long id);
+    public void DeleteEducation(Long id);
     
-    public List<Education> GetJobExperiencesByPersonaId(Long personaId);
+    public List<Education> GetEducationByPersonaId(Long personaId);
 }

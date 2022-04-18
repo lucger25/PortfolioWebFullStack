@@ -12,7 +12,7 @@ public interface ISkillService {
     
     public void CreateSkill(Skill skill);
     
-    public void Deleteskill(Long id);
+    public void DeleteSkill(Long id);
     
     public List<Skill> GetSkillsByPersonaId(Long personaId);
 }
