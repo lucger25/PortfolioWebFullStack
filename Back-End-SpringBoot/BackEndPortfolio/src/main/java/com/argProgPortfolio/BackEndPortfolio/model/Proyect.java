@@ -59,3 +59,4 @@ public class Proyect {
         this.personaId = personaId;
         this.personaUser = personaUser;
     }
+}
