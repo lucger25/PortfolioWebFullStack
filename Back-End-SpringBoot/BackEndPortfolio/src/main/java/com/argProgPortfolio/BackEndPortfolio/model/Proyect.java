@@ -59,10 +59,3 @@ public class Proyect {
         this.personaId = personaId;
         this.personaUser = personaUser;
     }
-<<<<<<< HEAD
-        
-        
-
-=======
->>>>>>> 08f64c2 (prueba de integracion)
-}
