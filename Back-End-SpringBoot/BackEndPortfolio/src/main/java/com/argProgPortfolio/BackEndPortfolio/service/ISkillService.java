@@ -15,4 +15,6 @@ public interface ISkillService {
     public void DeleteSkill(Long id);
     
     public List<Skill> GetSkillsByPersonaId(Long personaId);
+    
+    public void UpdateSkill (Skill skill, Long id);
 }

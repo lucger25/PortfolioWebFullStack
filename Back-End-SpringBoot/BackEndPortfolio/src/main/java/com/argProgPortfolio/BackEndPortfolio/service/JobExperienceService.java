@@ -37,4 +37,9 @@ public class JobExperienceService implements IJobExperienceService{
     public List<JobExperience> GetJobExperiencesByPersonaId(Long personaId) {
         return jobExperienceRepo.findAllByPersonaId(personaId);
     }
+    
+    @Override
+    public void UpdateJobExperience (JobExperience jobExperience, Long id){
+        jobExperienceRepo.save(jobExperience);
+    }
 }

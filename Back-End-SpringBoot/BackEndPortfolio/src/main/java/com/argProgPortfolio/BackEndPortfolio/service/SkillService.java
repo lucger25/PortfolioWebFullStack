@@ -37,4 +37,9 @@ public class SkillService implements ISkillService{
     public List<Skill> GetSkillsByPersonaId(Long personaId) {
         return skillRepo.findAllByPersonaId(personaId);
     }
+    
+    @Override
+    public void UpdateSkill (Skill skill, Long id){
+        skillRepo.save(skill);
+    }
 }
