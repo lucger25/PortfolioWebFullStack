@@ -76,14 +76,15 @@ public class PortfolioDTOController {
     //CRUD mapping para entidades
     //Mapping Persona
     @PostMapping("/portfolio/persona/new/{id}")
-    @ResponseBody
-    public void CreatePortfolioPersona (@RequestBody Persona pers){
+    public String CreatePortfolioPersona (@RequestBody Persona pers){
         persService.CreatePersona(pers);
+        return "El usuario se creo correctamente";
     }
     
     @DeleteMapping("/portfolio/personsa/delete/{id}")
-    public void DeletePortfolioPersona(@PathVariable Long id){
+    public String DeletePortfolioPersona(@PathVariable Long id){
         persService.DeletePersona(id);
+        return "El usuario se elimino correctamente";
     }
     
     @PutMapping("/portfolio/persona/update/{id}")
@@ -114,18 +115,19 @@ public class PortfolioDTOController {
     //Mapping JobExperience
     
     @PostMapping("/portfolio/job/new/{id}")
-    @ResponseBody
-    public void CreatePortfolioJobExperience (@RequestBody JobExperience job){
+    public String CreatePortfolioJobExperience (@RequestBody JobExperience job){
         jobService.CreateJobExperience(job);
+        return "La experienca laboral se creo correctamente";
     }
     
     @DeleteMapping("/portfolio/job/delete/{id}")
-    public void DeleteJobExperience(@PathVariable Long id){
+    public String DeleteJobExperience(@PathVariable Long id){
         jobService.DeleteJobExperience(id);
+        return "La experienca Laboral fue eliminada correctamente";
     }
     
     @PutMapping("/portfolio/job/update/{id}")
-    public void UpdateJobExperience (@PathVariable long id,
+    public JobExperience UpdateJobExperience (@PathVariable long id,
                               @RequestParam("company_name") String newCompanyName,
                               @RequestParam("job_title") String newTitle,
                               @RequestParam("job_start_date") Date newStartDate,
@@ -145,19 +147,24 @@ public class PortfolioDTOController {
         jobExperience.setJobTypeId(newJobType);
         
         jobService.UpdateJobExperience(jobExperience, id);
+        return jobExperience;
     }
     
     //Mapping Education
     
     @PostMapping("/portfolio/education/new/{id}")
     @ResponseBody
-    public void CreatePortfolioEducation (@RequestBody Education education){
+    public String CreatePortfolioEducation (@RequestBody Education education){
         educationService.CreateEducation(education);
+        
+        return "La educacion se creo correctamente";
     }
     
     @DeleteMapping("/portfolio/education/delete/{id}")
-    public void DeleteEducation(@PathVariable Long id){
+    public String DeleteEducation(@PathVariable Long id){
         educationService.DeleteEducation(id);
+        
+        return "La educacion se elimino correctamente";
     }
     
     @PutMapping("/portfolio/education/update/{id}")
@@ -184,13 +191,17 @@ public class PortfolioDTOController {
     
     @PostMapping("/portfolio/proyect/new/{id}")
     @ResponseBody
-    public void CreatePortfolioProyect (@RequestBody Proyect proyect){
+    public String CreatePortfolioProyect (@RequestBody Proyect proyect){
         proyectService.CreateProyect(proyect);
+        
+        return "El proyecto se creo correctamente";
     }
     
     @DeleteMapping("/portfolio/proyect/delete/{id}")
-    public void DeleteProyect(@PathVariable Long id){
+    public String DeleteProyect(@PathVariable Long id){
         proyectService.DeleteProyect(id);
+        
+        return "El proyecto se elimino correctamente";
     }
     
     @PutMapping("/portfolio/proyect/update/{id}")
@@ -217,13 +228,17 @@ public class PortfolioDTOController {
     
     @PostMapping("/portfolio/skill/new/{id}")
     @ResponseBody
-    public void CreatePortfolioSkill (@RequestBody Skill skill){
+    public String CreatePortfolioSkill (@RequestBody Skill skill){
         skillService.CreateSkill(skill);
+        
+        return "El skill se creo correctamente";
     }
     
     @DeleteMapping("/portfolio/skill/delete/{id}")
-    public void DeleteSkill(@PathVariable Long id){
+    public String DeleteSkill(@PathVariable Long id){
         skillService.DeleteSkill(id);
+        
+        return "El skill se elimino correctamente";
     }
     
     @PutMapping("/portfolio/skill/update/{id}")
