@@ -11,6 +11,7 @@ export class AboutMeComponent implements OnInit {
   constructor(private getDatosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.getDatosPortfolio.GetbyUserId().subscribe(data =>{console.log(data)})
   }
 
 }
