@@ -7,10 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioService {
 
+  url:string="http://localhost:8080/portfolio/";
+
   constructor(private http:HttpClient) { }
     
     GetbyUserId():Observable<any>
     {
-      return this.http.get("localhost:8080/persona/1");
+      return this.http.get<any>(this.url+1);
     }
 }
