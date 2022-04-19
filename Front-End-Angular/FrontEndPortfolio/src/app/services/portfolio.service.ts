@@ -9,8 +9,8 @@ export class PortfolioService {
 
   constructor(private http:HttpClient) { }
     
-    GetbyUserName():Observable<any>
+    GetbyUserId():Observable<any>
     {
-      return this.http.get("url donde pedimos los datos");
+      return this.http.get("localhost:8080/persona/1");
     }
 }

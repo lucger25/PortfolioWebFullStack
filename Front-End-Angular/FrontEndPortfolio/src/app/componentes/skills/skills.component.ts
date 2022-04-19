@@ -11,7 +11,7 @@ export class SkillsComponent implements OnInit {
   constructor(private getDatosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.getDatosPortfolio.GetbyUserName();
+    this.getDatosPortfolio.GetbyUserId();
   }
 
 }
