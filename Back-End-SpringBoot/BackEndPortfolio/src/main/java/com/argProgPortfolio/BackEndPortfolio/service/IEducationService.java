@@ -15,4 +15,6 @@ public interface IEducationService {
     public void DeleteEducation(Long id);
     
     public List<Education> GetEducationByPersonaId(Long personaId);
+    
+    public void UpdateEducation (Education education, Long id);
 }

@@ -37,4 +37,9 @@ public class EducationService implements IEducationService{
     public List<Education> GetEducationByPersonaId(Long personaId) {
         return educationRepo.findAllByPersonaId(personaId);
     }
+    
+    @Override
+    public void UpdateEducation (Education education, Long id){
+        educationRepo.save(education);
+    }
 }

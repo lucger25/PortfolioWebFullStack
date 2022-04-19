@@ -15,4 +15,6 @@ public interface IJobExperienceService {
     public void DeleteJobExperience(Long id);
     
     public List<JobExperience> GetJobExperiencesByPersonaId(Long personaId);
+    
+    public void UpdateJobExperience (JobExperience jobExperience, Long id);
 }

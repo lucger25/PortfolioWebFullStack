@@ -15,5 +15,7 @@ public interface IProyectService {
     public void DeleteProyect(Long id);
 
     public List<Proyect> GetProyectByPersonaId(Long personaId);
+    
+    public void UpdateProyect (Proyect proyect, Long id);
 
 }

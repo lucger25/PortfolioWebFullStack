@@ -37,4 +37,9 @@ public class ProyectService implements IProyectService{
     public List<Proyect> GetProyectByPersonaId(Long personaId) {
         return proyectRepo.findAllByPersonaId(personaId);
     }
+    
+    @Override
+    public void UpdateProyect (Proyect proyect, Long id){
+        proyectRepo.save(proyect);
+    }
 }
