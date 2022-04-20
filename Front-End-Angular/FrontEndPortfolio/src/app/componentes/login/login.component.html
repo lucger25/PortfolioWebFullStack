@@ -1,0 +1,20 @@
+<h1>Iniciar Sesion</h1>
+<form [formGroup]="form" class="mb-5" (ngSubmit)="onSend($event)">
+    <article class="mb-3">
+      <label for="text" class="form-label">User</label>
+      <input type="text" formControllName="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <article *ngIf="User?.errors && User?.touched">
+          <p *ngIf="User?.hasError('required')" class="text-danger">
+              El User es un campo requerido
+          </p>
+          <p *ngIf="User?.errors?.['minlength']" class="text-danger">
+            El User debe ser de al menos 4 caracteres
+        </p>
+      </article>
+    </article>
+    <article class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password"  formControllName="password" class="form-control" id="exampleInputPassword1">
+    </article>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
