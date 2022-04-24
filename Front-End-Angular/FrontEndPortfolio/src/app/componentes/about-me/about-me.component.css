@@ -1,5 +1,4 @@
 .about-me-main-class{
-    background-color: violet;
     display: flex;
     margin: 2%;
     flex-direction: column;
@@ -20,17 +19,14 @@
 }
 
 .datos-persona{
-    background-color: aquamarine;
     width: 40%;
 }
 
 .persona-picture-container{
-    background-color: blue;
     width: 20%;
 }
 
 .about-me{
-    background-color: red;
     width: 60%;
     justify-content: center;
     align-content: center;

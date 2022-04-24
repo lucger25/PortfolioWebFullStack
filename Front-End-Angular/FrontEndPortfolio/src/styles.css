@@ -21,6 +21,11 @@ h6 {
     width: 5%;
 }
 
+.experiences-article{
+    display: flex;
+    margin: 1%;
+}
+
 .experience-p{
     list-style: none;
 }
