@@ -16,6 +16,15 @@ h6 {
     margin: 8px 0;
 }
 
+
+.thumbnail-photo-img{
+    width: 5%;
+}
+
+.experience-p{
+    list-style: none;
+}
+
 p {
     margin: 0;
 }

@@ -7,10 +7,13 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./job-experience.component.css']
 })
 export class JobExperienceComponent implements OnInit {
-
+  jobExperienceList:any;
   constructor(private getDatosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.getDatosPortfolio.GetbyUserId().subscribe(data=>{
+      this.jobExperienceList=data.jobExperience;
+    });
   }
 
 }

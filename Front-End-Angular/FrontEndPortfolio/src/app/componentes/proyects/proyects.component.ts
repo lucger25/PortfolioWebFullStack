@@ -7,10 +7,12 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./proyects.component.css']
 })
 export class ProyectsComponent implements OnInit {
-
+  proyectsList:any;
   constructor(private getDatosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.getDatosPortfolio.GetbyUserId().subscribe(data=>{
+      this.proyectsList=data.proyect;
+    });
   }
-
 }

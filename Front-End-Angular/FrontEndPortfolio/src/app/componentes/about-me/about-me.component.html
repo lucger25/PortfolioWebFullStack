@@ -1,40 +1,19 @@
-<section>
-    <section id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <article class="carousel-inner">
-          <figure class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
-          </figure>
-          <figure class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
-          </figure>
-          <figure class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
-          </figure>
-        </article>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-    </section>
-    <section>
-        <article class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <article class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </article>
-        </article>
-    </section>
-    <section>
-        <article class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <article class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </article>
-        </article>
-    </section>
+<section class="about-me-main-class">
+  <section class="banner-photo">
+    <figure class="banner-photo-figure">
+      <img [src]="portfolioData.bannerPhoto" class="img-fluid" alt="Responsive image">
+    </figure>
+  </section>
+  <section class="datos-persona-container">
+    <article class="datos-persona">
+      <figure class="persona-picture-container"><img [src]="portfolioData.personaPhoto" alt="..." class="img-circle"></figure>
+      <p>Nombre: {{portfolioData.name}} {{portfolioData.lastName}}</p>
+      <p>Titulo: {{portfolioData.title}}</p>
+      <p>email: {{portfolioData.email}}</p>
+      <p>Celular: {{portfolioData.phoneNumber}}</p>
+    </article>
+    <article class="about-me">
+      <p class="about-me">{{portfolioData.aboutMe}}</p>
+    </article>
+  </section>
 </section>
-

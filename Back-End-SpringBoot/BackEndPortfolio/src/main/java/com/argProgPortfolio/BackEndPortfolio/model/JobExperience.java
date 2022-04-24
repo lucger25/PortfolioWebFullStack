@@ -38,6 +38,9 @@ public class JobExperience {
     @Column(name="job_photo")
     private String jobPhoto;
     
+    @Column(name="job_description")
+    private String jobDescription;
+    
     @Column(name="is_current_job")
     private int isCurrentJob;
     
@@ -54,7 +57,7 @@ public class JobExperience {
         public JobExperience() {
     }
 
-    public JobExperience(long id, String user, String companyName, String jobTitle, Date jobStartDate, Date jobEndDate, String jobPhoto, int isCurrentJob, long personaId, String personaUser, int jobTypeId) {
+    public JobExperience(long id, String user, String companyName, String jobTitle, Date jobStartDate, Date jobEndDate, String jobPhoto, String jobDescription, int isCurrentJob, long personaId, String personaUser, int jobTypeId) {
         this.id = id;
         this.user = user;
         this.companyName = companyName;
@@ -62,11 +65,14 @@ public class JobExperience {
         this.jobStartDate = jobStartDate;
         this.jobEndDate = jobEndDate;
         this.jobPhoto = jobPhoto;
+        this.jobDescription = jobDescription;
         this.isCurrentJob = isCurrentJob;
         this.personaId = personaId;
         this.personaUser = personaUser;
         this.jobTypeId = jobTypeId;
     }
+
+    
 
         
 }

@@ -20,11 +20,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api")
 public class PortfolioDTOController {
     
     @Autowired
@@ -133,6 +135,7 @@ public class PortfolioDTOController {
                               @RequestParam("job_start_date") Date newStartDate,
                               @RequestParam("job_end_date") Date newEndDate,
                               @RequestParam("job_photo") String newJobPhoto,
+                              @RequestParam("job_description") String newJobDescription,
                               @RequestParam("is_current_job") int newCurrentJob,
                               @RequestParam("job_type_id") int newJobType) {
         
@@ -143,6 +146,7 @@ public class PortfolioDTOController {
         jobExperience.setJobStartDate(newStartDate);
         jobExperience.setJobEndDate(newEndDate);
         jobExperience.setJobPhoto(newJobPhoto);
+        jobExperience.setJobDescription(newJobDescription);
         jobExperience.setIsCurrentJob(newCurrentJob);
         jobExperience.setJobTypeId(newJobType);
         

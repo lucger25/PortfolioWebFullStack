@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthenticatorService {
 
-  url:string="http://localhost:8080/portfolio";
+  url:string="http://localhost:8080/api/portfolio/1";
   //token;
   currentUserSubject: BehaviorSubject<any>;
 

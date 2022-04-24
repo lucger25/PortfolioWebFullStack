@@ -1,1 +1,13 @@
-<p>job-experience works!</p>
+<section>
+    <h2>Experiencias Laborales</h2>
+    <article *ngFor="let jobExperience of jobExperienceList" class="experiences-article">
+        <figure class="thumbnail-photo-img"><img class="img-thumbnail" [src]="jobExperience.jobPhoto"></figure>
+        <ul class="experiences-article-info">
+            <li class="experience-p"> {{jobExperience.companyName}}</li>
+            <li class="experience-p">{{jobExperience.jobTitle}}</li>
+            <li class="experience-p">{{jobExperience.jobStartDate  | date: 'dd/MM/yyyy'}} - {{jobExperience.jobEndDate  | date: 'dd/MM/yyyy'}} </li>
+        </ul>
+        <p class="experience-p">{{jobExperience.jobDescription}}</p>
+    </article>
+</section>
+

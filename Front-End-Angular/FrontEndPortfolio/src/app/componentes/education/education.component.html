@@ -1,1 +1,11 @@
-<p>education works!</p>
+<section>
+    <h2>Educacion</h2>
+    <article *ngFor="let education of educationList" class="experiences-article">
+        <figure class="thumbnail-photo-img"><img class="img-thumbnail" [src]="education.schoolPhoto"></figure>
+        <ul class="experiences-article-info">
+            <li class="experience-p"> {{education.schoolName}}</li>
+            <li class="experience-p">{{education.educationTitle}}</li>
+            <li class="experience-p"><time>{{education.educationStartDate  | date: 'dd/MM/yyyy'}} </time> - <time>{{education.educationEndDate  | date: 'dd/MM/yyyy'}}</time> </li>
+        </ul>
+    </article>
+</section>

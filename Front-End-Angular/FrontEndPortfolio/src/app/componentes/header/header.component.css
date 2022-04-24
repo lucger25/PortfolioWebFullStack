@@ -1,0 +1,35 @@
+.header-section-main{
+    display: flex;
+    width: 100%;
+}
+
+.web-logo{
+    display: flex;
+    width: 85%;
+    align-items: center;
+}
+
+.title-main-header{
+    margin-left: 2%;
+    width: 85%;
+}
+
+.web-logo-figure{
+    align-items: center;
+    width: 5%;
+}
+
+
+.nav-login-section{
+    display: flex;
+    align-items: center;
+}
+
+.nav-display{
+    width: 70%;
+    margin-right: 2%;
+}
+
+.nav{
+    flex-wrap: nowrap;
+}

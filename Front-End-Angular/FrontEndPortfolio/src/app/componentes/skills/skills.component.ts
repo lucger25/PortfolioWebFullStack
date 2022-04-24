@@ -7,11 +7,13 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-
+  skillList:any;
   constructor(private getDatosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.getDatosPortfolio.GetbyUserId();
+    this.getDatosPortfolio.GetbyUserId().subscribe(data=>{
+      this.skillList=data.skill;
+    });
   }
 
 }

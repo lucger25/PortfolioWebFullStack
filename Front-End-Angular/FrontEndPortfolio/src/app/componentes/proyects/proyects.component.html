@@ -1,1 +1,11 @@
-<p>proyects works!</p>
+<section>
+    <h2>Proyectos</h2>
+    <article *ngFor="let proyect of proyectsList" class="experiences-article">
+        <figure class="thumbnail-photo-img"><img class="img-thumbnail" [src]="proyect.proyectPhoto"></figure>
+        <ul class="experiences-article-info">
+            <li class="experience-p"> {{proyect.proyectTitle}}</li>
+            <li class="experience-p"><time>{{proyect.proyectStartDate  | date: 'dd/MM/yyyy'}} </time> - <time>{{proyect.proyectEndDate  | date: 'dd/MM/yyyy'}}</time> </li>
+            <li class="experience-p">{{proyect.proyectDescription}}</li>
+        </ul>
+    </article>
+</section>
